@@ -8,7 +8,6 @@ import threading
 client_socket = socket.socket()
 client_socket.connect(('127.0.0.1', 5555))
 
-#-----------------------------------------------------------------------------------
 def job():
     while True:
         print('\n')
@@ -19,7 +18,7 @@ def job():
 
 t = threading.Thread(target=job)
 t.start()
-#-----------------------------------------------------------------------------------
+
 while True:
     try:
         datat=client_socket.recv(1024).decode()
